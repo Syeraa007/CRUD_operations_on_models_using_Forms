@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inserting data into emp model</title>
+</head>
+<body>
+    <center>
+        <h1>Inserting data into Employee
+             Model/table</h1>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <label for="nos">Emp No : </label>
+            <input type="number" name="nos" id="nos"><br><br>
+            <label for="names">Emp Name : </label>
+            <input type="text" name="names" id="names"><br><br>
+            <label for="jobs">Job : </label>
+            <input type="text" name="jobs" id="jobs"><br><br>
+            <label for="manages">Manager : </label>
+            <input type="number" name="manages" id="manages"><br><br>
+            <label for="hires">Hire Date : </label>
+            <input type="date" name="hires" id="hires"><br><br>
+            <label for="sals">Salary : </label>
+            <input type="number" name="sals" id="sals"><br><br>
+            <label for="depts">Dept_id</label>
+            <select name="depts" id="depts">
+                {% for do in LDO %}
+                    <option value="{{do.Dept_id}}">{{do.Dept_id}}</option>
+                {% endfor %}
+            </select><br><br>
+            <input type="submit" value="Insert Emp">
+        </form>
+    </center>
+</body>
+</html>

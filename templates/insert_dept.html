@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inserting data into dept model</title>
+</head>
+<body>
+    <center>
+        <h1>Inserting data into Department Model/table</h1>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <label for="ids">Dept ID : </label>
+            <input type="number" name="ids" id="ids"><br><br>
+            <label for="names">Dept Name : </label>
+            <input type="text" name="names" id="names"><br><br>
+            <label for="locs">Dept Loc : </label>
+            <input type="text" name="locs" id="locs"><br><br>
+            <input type="submit" value="Insert Dept">
+        </form>
+    </center>
+</body>
+</html>
